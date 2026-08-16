@@ -1,0 +1,279 @@
+.header {
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    border-bottom: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    font-family: 'Jost', 'Montserrat', -apple-system, sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    white-space: nowrap;
+}
+
+.menu-item {
+    font-size: 13px;
+    font-weight: 500;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: 85px;
+}
+
+.menu-item:hover {
+    text-decoration: underline;
+}
+
+.menu-item.highlight {
+    color: #d6182a;
+}
+
+.chevron {
+    width: 12px;
+    height: 12px;
+    margin-top: 0px;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.black-logo {
+    margin-top: 5px;
+    margin-left: 30px;
+
+}
+
+.header-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    color: #000;
+    cursor: pointer;
+}
+
+.nav-item-wrapper {
+    height: 85px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mega-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 1050px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-top: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    z-index: 999;
+    padding-left: 0;
+    animation: slideFromLeft 0.3s ease-out forwards;
+    transform-origin: left center;
+}
+
+.mega-links-container {
+    display: flex;
+    gap: 100px;
+    padding: 36px 0 36px 40px;
+    width: 50%;
+}
+
+.mega-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.mega-column a {
+    text-decoration: none;
+    color: #111;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.mega-column a:hover {
+    text-decoration: underline;
+}
+
+.mega-images {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background: #f5f5f5;
+}
+
+.mega-images img {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    min-height: 0;
+    object-fit: cover;
+    object-position: center 15%;
+    display: block;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    padding: 0;
+}
+
+.mobile-menu-toggle svg {
+    width: 28px;
+    height: 28px;
+}
+
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+}
+
+.mobile-menu-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 85%;
+    max-width: 350px;
+    height: 100vh;
+    background: #fff;
+    z-index: 10001;
+    display: flex;
+    flex-direction: column;
+    animation: slideInLeft 0.3s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu-header {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.mobile-menu-header .logo {
+    position: static;
+    transform: none;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+
+.close-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.close-menu svg {
+    width: 24px;
+    height: 24px;
+}
+
+.mobile-menu-links {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    gap: 24px;
+    overflow-y: auto;
+}
+
+.mobile-menu-links a {
+    text-decoration: none;
+    color: #111;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.mobile-menu-links a.highlight {
+    color: #d6182a;
+}
+
+@media (max-width: 1024px) {
+    .header {
+        padding: 0 20px;
+    }
+
+    .header-menu {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .header-icons {
+        gap: 12px;
+    }
+
+    .black-logo {
+        margin-top: 0;
+        margin-left: 0;
+    }
+}

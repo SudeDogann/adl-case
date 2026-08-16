@@ -1,0 +1,238 @@
+<header class="header">
+    <button class="mobile-menu-toggle" (click)="isMobileMenuOpen.set(true)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+    </button>
+    <nav class="header-menu">
+        <div class="nav-item-wrapper" (mouseenter)="isSaleMenuOpen.set(true)" (mouseleave)="isSaleMenuOpen.set(false)">
+            <a class="menu-item highlight">
+                Büyük Yaz İndirimi
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </a>
+            @if (isSaleMenuOpen()) {
+            <div class="mega-menu">
+                <div class="mega-links-container">
+                    <div class="mega-column">
+                        <a href="#">Tümü</a>
+                        <a href="#">Elbise</a>
+                        <a href="#">Bluz</a>
+                        <a href="#">Gömlek</a>
+                        <a href="#">Tişört</a>
+                        <a href="#">Atlet</a>
+                        <a href="#">Ceket</a>
+                        <a href="#">Yelek</a>
+                        <a href="#">Etek</a>
+                        <a href="#">Şort</a>
+                        <a href="#">Pantolon</a>
+                        <a href="#">Tulum</a>
+                        <a href="#">Dış Giyim</a>
+                        <a href="#">Kazak</a>
+                    </div>
+
+                </div>
+                <div class="mega-images">
+                    <img src="images/products/byi-img1.jpg" alt="Banner 1">
+                    <img src="images/products/byi-img2.jpg" alt="Banner 2">
+                    <img src="images/products/byi-img3.jpg" alt="Banner 3">
+                </div>
+            </div>
+            }
+        </div>
+        <a class="menu-item">
+            Yeniler
+        </a>
+        <div class="nav-item-wrapper" (mouseenter)="isCategoryMenuOpen.set(true)"
+            (mouseleave)="isCategoryMenuOpen.set(false)">
+            <a class="menu-item">
+                Kategoriler
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </a>
+
+            @if (isCategoryMenuOpen()) {
+            <div class="mega-menu">
+                <div class="mega-links-container">
+                    <div class="mega-column">
+                        <a href="#">Tümü</a>
+                        <a href="#">Elbise</a>
+                        <a href="#">Bluz</a>
+                        <a href="#">Gömlek</a>
+                        <a href="#">Tişört</a>
+                        <a href="#">Atlet</a>
+                        <a href="#">Ceket</a>
+                        <a href="#">Yelek</a>
+                        <a href="#">Etek</a>
+                        <a href="#">Şort</a>
+                        <a href="#">Pantolon</a>
+                        <a href="#">Tulum</a>
+                        <a href="#">Dış Giyim</a>
+                        <a href="#">Kazak</a>
+                    </div>
+                    <div class="mega-column">
+                        <a href="#">Özel Koleksiyonlar</a>
+                        <a href="#">Beachwear</a>
+                        <a href="#">Mert Aslan</a>
+                        <a href="#">NightZoom</a>
+                        <a href="#">Moda Tutkusu</a>
+                        <a href="#">Nature Love</a>
+                        <a href="#">Denim</a>
+                        <a href="#">Takımlar</a>
+                        <a href="#">Online Özel</a>
+                        <a href="#">TOÇEV x adL</a>
+                        <a href="#">Hediye Kartı</a>
+                    </div>
+                </div>
+
+
+                <div class="mega-images">
+                    <img src="images/products/headerimg-1.jpg" alt="Banner 1">
+                    <img src="images/products/headerimg2.jpg" alt="Banner 2">
+                    <img src="images/products/headerimg3.jpg" alt="Banner 3">
+                </div>
+            </div>
+            }
+        </div>
+        <div class="nav-item-wrapper" (mouseenter)="isMertAslanMenuOpen.set(true)"
+            (mouseleave)="isMertAslanMenuOpen.set(false)">
+            <a class="menu-item">
+                Mert Aslan
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </a>
+            @if (isMertAslanMenuOpen()) {
+            <div class="mega-menu">
+                <div class="mega-links-container">
+                    <div class="mega-column">
+                        <a href="#">Tümü</a>
+                        <a href="#">Elbise</a>
+                        <a href="#">Bluz</a>
+                        <a href="#">Gömlek</a>
+                        <a href="#">Tişört</a>
+                        <a href="#">Atlet</a>
+                        <a href="#">Ceket</a>
+                        <a href="#">Yelek</a>
+                        <a href="#">Etek</a>
+                        <a href="#">Şort</a>
+                        <a href="#">Pantolon</a>
+                        <a href="#">Tulum</a>
+                        <a href="#">Dış Giyim</a>
+                        <a href="#">Kazak</a>
+                    </div>
+
+                </div>
+                <div class="mega-images">
+                    <img src="images/products/ma-img1.jpg" alt="Banner 1">
+                    <img src="images/products/ma2.jpg" alt="Banner 2">
+                    <img src="images/products/ma-img3.jpg" alt="Banner 3">
+                </div>
+            </div>
+            }
+        </div>
+        <a class="menu-item">
+            NightZoom
+        </a>
+        <div class="nav-item-wrapper" (mouseenter)="isOutletMenuOpen.set(true)"
+            (mouseleave)="isOutletMenuOpen.set(false)">
+            <a class="menu-item">
+                Outlet
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </a>
+            @if (isOutletMenuOpen()) {
+            <div class="mega-menu">
+                <div class="mega-links-container">
+                    <div class="mega-column">
+                        <a href="#">Tümü</a>
+                        <a href="#">Elbise</a>
+                        <a href="#">Bluz</a>
+                        <a href="#">Gömlek</a>
+                        <a href="#">Tişört</a>
+                        <a href="#">Atlet</a>
+                        <a href="#">Ceket</a>
+                        <a href="#">Yelek</a>
+                        <a href="#">Etek</a>
+                        <a href="#">Şort</a>
+                        <a href="#">Pantolon</a>
+                        <a href="#">Tulum</a>
+                        <a href="#">Dış Giyim</a>
+                        <a href="#">Kazak</a>
+                    </div>
+
+                </div>
+                <div class="mega-images">
+                    <img src="images/products/outletimg1.jpg" alt="Banner 1">
+                    <img src="images/products/outletimg2.jpg" alt="Banner 2">
+                    <img src="images/products/outletimg3.jpg" alt="Banner 3">
+                </div>
+            </div>
+            }
+        </div>
+    </nav>
+
+    <div class="logo">
+        <img src="images/assets/adl-logo-black.svg" alt="adL Logo" width="87" height="43" class="black-logo">
+    </div>
+
+    <div class="header-icons">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+        </svg>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+    </div>
+</header>
+
+@if (isMobileMenuOpen()) {
+<div class="mobile-menu-overlay" (click)="isMobileMenuOpen.set(false)"></div>
+<div class="mobile-menu-drawer">
+    <div class="mobile-menu-header">
+        <div class="logo">
+            <img src="images/assets/adl-logo-black.svg" alt="adL Logo" width="87" height="43" class="black-logo">
+        </div>
+
+        <button class="close-menu" (click)="isMobileMenuOpen.set(false)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+    </div>
+    <div class="mobile-menu-links">
+        <a href="#" class="highlight">Büyük Yaz İndirimi</a>
+        <a href="#">Yeniler</a>
+        <a href="#">Kategoriler</a>
+        <a href="#">Mert Aslan</a>
+        <a href="#">NightZoom</a>
+        <a href="#">Outlet</a>
+    </div>
+</div>
+}

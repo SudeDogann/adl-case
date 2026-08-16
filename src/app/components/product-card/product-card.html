@@ -1,0 +1,54 @@
+<div class="product-card">
+
+    <div class="product-image">
+
+
+        <div class="product-track" [style.transform]="'translateX(-' + currentImageIndex() * 100 + '%)'">
+            @for (image of product().images; track image) {
+            <img [src]="image" [alt]="product().name" />
+            }
+        </div>
+
+
+
+        <button class="slider-button slider-button-left" (click)="previousImage()" aria-label="Önceki görsel">
+            <span></span>
+        </button>
+
+        <button class="slider-button slider-button-right" (click)="nextImage()" aria-label="Sonraki görsel">
+            <span></span>
+        </button>
+
+
+        <button class="add-button" aria-label="Sepete ekle">
+            +
+        </button>
+
+
+
+        <button class="favorite-button" aria-label="Favorilere ekle">
+            <svg width="12" height="16" viewBox="0 0 14 18" fill="none" stroke="#555" stroke-width="1.2"
+                stroke-linecap="square" stroke-linejoin="miter">
+                <path d="M1 17L7 12L13 17V2C13 1.44772 12.5523 1 12 1H2C1.44772 1 1 1.44772 1 2V17Z"></path>
+            </svg>
+        </button>
+
+        <div class="image-progress">
+            <div class="progress-thumb" [style.width.%]="100 / product().images.length"
+                [style.transform]="'translateX(' + (currentImageIndex() * 100) + '%)'">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="product-info">
+        <div class="title-row">
+            <h3 [title]="product().name">{{ product().name }}</h3>
+            @if (product().colors && product().colors! > 1) {
+            <span class="color-count">+{{ product().colors! - 1 }} Renk</span>
+            }
+        </div>
+        <p class="price">{{ product().price | number:'1.2-2' }} TL</p>
+    </div>
+
+</div>

@@ -1,0 +1,7 @@
+<div class="category-nav">
+    @for (category of categories(); track category) {
+    <button type="button" (click)="selectCategory(category)">
+        {{ category }}
+    </button>
+    }
+</div>
