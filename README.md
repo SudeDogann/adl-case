@@ -17,7 +17,6 @@ This project was developed using Angular for the Haratres Fit Internship Program
 - Responsive navigation header
 - Interactive dropdown menus (desktop mega menu)
 - Product grid listing and view toggles 
-- Dynamic color variant indicator (+X Colors)
 - Add to cart button
 - Favorite button
   
